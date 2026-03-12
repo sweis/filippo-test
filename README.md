@@ -1,2 +1,0 @@
-# filippo-test
-Filippo test
