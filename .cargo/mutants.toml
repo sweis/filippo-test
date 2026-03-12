@@ -1,0 +1,7 @@
+# Skip params.rs: it's just numeric constants. Mutating them changes the
+# parameter set wholesale, which tells us nothing about test vector coverage.
+exclude_globs = ["src/params.rs"]
+
+# The unit tests in src/ are NTT sanity checks; we only want the Wycheproof
+# harness to be the oracle. Run only the integration test.
+additional_cargo_test_args = ["--test", "wycheproof"]
